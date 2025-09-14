@@ -12,92 +12,96 @@ export default function Index() {
 
   const courseModules = [
     {
-      title: "Основы маникюра",
-      description: "Анатомия ногтя, подготовка рабочего места, санитария",
-      duration: "4 часа",
-      icon: "User"
+      title: "Видео-уроки основ",
+      description: "Теория маникюра, анатомия ногтя, подготовка инструментов",
+      duration: "8 видео",
+      icon: "Play"
     },
     {
       title: "Техники обработки",
-      description: "Аппаратный и комбинированный маникюр",
-      duration: "6 часов", 
+      description: "Пошаговые видео аппаратного и комбинированного маникюра",
+      duration: "12 уроков", 
       icon: "Settings"
     },
     {
       title: "Покрытие гель-лаком",
-      description: "Нанесение базы, цвета, топа. Работа с формами",
-      duration: "8 часов",
+      description: "Детальные мастер-классы по нанесению покрытий",
+      duration: "15 видео",
       icon: "Palette"
     },
     {
       title: "Дизайн ногтей",
-      description: "Френч, градиент, стемпинг, рисунки",
-      duration: "10 часов",
+      description: "Креативные техники: френч, градиент, стемпинг, art",
+      duration: "20 уроков",
       icon: "Brush"
     },
     {
-      title: "Коррекция и ремонт",
-      description: "Исправление недостатков, укрепление ногтей",
-      duration: "4 часа",
-      icon: "Wrench"
+      title: "Домашние задания",
+      description: "Практические задания с проверкой наставника",
+      duration: "10 заданий",
+      icon: "BookOpen"
     },
     {
-      title: "Практика с моделями",
-      description: "Отработка навыков на реальных клиентах",
-      duration: "12 часов",
-      icon: "Users"
+      title: "Онлайн консультации",
+      description: "Еженедельные вебинары и разбор работ",
+      duration: "8 встреч",
+      icon: "Video"
     }
   ];
 
   const tariffs = [
     {
-      name: "Базовый",
-      price: "15 000 ₽",
-      duration: "2 недели",
-      features: ["Основы маникюра", "Покрытие гель-лаком", "Сертификат", "Стартовый набор инструментов"]
+      name: "Базовый онлайн",
+      price: "12 000 ₽",
+      duration: "1 месяц",
+      features: ["30 видео-уроков", "Базовые техники", "Чат с наставником", "Сертификат", "Доступ 6 месяцев"]
     },
     {
-      name: "Стандарт", 
-      price: "25 000 ₽",
-      duration: "3 недели",
-      features: ["Все из Базового", "Дизайн ногтей", "Коррекция и ремонт", "Практика с моделями", "Поддержка 3 месяца"],
+      name: "Премиум", 
+      price: "24 000 ₽",
+      duration: "2 месяца",
+      features: ["60+ видео-уроков", "Все техники дизайна", "Личный наставник", "Еженедельные вебинары", "Проверка домашних заданий", "Пожизненный доступ"],
       popular: true
     },
     {
-      name: "Профи",
-      price: "35 000 ₽", 
-      duration: "4 недели",
-      features: ["Все из Стандарт", "Продвинутые техники", "Бизнес-блок", "Помощь в трудоустройстве", "Поддержка 6 месяцев"]
+      name: "VIP Мастер",
+      price: "45 000 ₽", 
+      duration: "3 месяца",
+      features: ["Все из Премиум", "Индивидуальные созвоны", "Бизнес-курс", "Помощь в продвижении", "Закрытое комьюнити", "Стажировка в топ-салоне"]
     }
   ];
 
   const schedule = [
-    { day: "Понедельник", time: "10:00 - 14:00", available: true },
-    { day: "Среда", time: "14:00 - 18:00", available: true },
-    { day: "Пятница", time: "10:00 - 14:00", available: false },
-    { day: "Суббота", time: "09:00 - 15:00", available: true },
-    { day: "Воскресенье", time: "11:00 - 15:00", available: true }
+    { day: "1 октября", time: "Старт потока", available: true },
+    { day: "15 октября", time: "Старт потока", available: true },
+    { day: "1 ноября", time: "Старт потока", available: false },
+    { day: "15 ноября", time: "Старт потока", available: true },
+    { day: "1 декабря", time: "Старт потока", available: true }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-yellow-50">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-pink-100">
+      <header className="bg-white/90 backdrop-blur-sm sticky top-0 z-50 border-b border-amber-200/50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
-              <Icon name="Sparkles" className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/files/64a672d0-19c7-424f-a7f9-4afb108ebbe7.png" 
+                alt="Lion Logo"
+                className="w-8 h-8 object-cover"
+              />
             </div>
             <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              NailArt Pro
+              NailArt Academy
             </h1>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#program" className="text-gray-700 hover:text-primary transition-colors">Программа</a>
-            <a href="#tariffs" className="text-gray-700 hover:text-primary transition-colors">Тарифы</a>
-            <a href="#schedule" className="text-gray-700 hover:text-primary transition-colors">Расписание</a>
-            <a href="#gallery" className="text-gray-700 hover:text-primary transition-colors">Галерея</a>
-            <a href="#contacts" className="text-gray-700 hover:text-primary transition-colors">Контакты</a>
+            <a href="#program" className="text-amber-800 hover:text-primary transition-colors">Программа</a>
+            <a href="#tariffs" className="text-amber-800 hover:text-primary transition-colors">Тарифы</a>
+            <a href="#schedule" className="text-amber-800 hover:text-primary transition-colors">Расписание</a>
+            <a href="#gallery" className="text-amber-800 hover:text-primary transition-colors">Галерея</a>
+            <a href="#contacts" className="text-amber-800 hover:text-primary transition-colors">Контакты</a>
           </nav>
           <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90">
             Записаться
@@ -109,14 +113,13 @@ export default function Index() {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <Badge className="mb-6 bg-gradient-to-r from-primary to-secondary text-white border-0">
-            ⭐ Лучший курс 2024 года
+            🦁 Онлайн обучение премиум класса
           </Badge>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            Маникюр комбинированный с 0
+            Онлайн курс маникюра с 0
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Освойте профессию мастера маникюра за 2-4 недели. От основ до продвинутых техник. 
-            Гарантируем трудоустройство и поддержку после обучения.
+          <p className="text-xl md:text-2xl text-amber-800 mb-8 max-w-3xl mx-auto">
+            Изучите искусство маникюра не выходя из дома. Индивидуальный подход, практические задания и поддержка наставника 24/7.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg px-8 py-4">
@@ -132,38 +135,38 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Clock" className="w-8 h-8 text-white" />
+                <Icon name="Monitor" className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-semibold text-lg mb-2">Быстрое обучение</h3>
-              <p className="text-gray-600">От 2 недель до профессионала</p>
+              <h3 className="font-semibold text-lg mb-2 text-amber-900">Онлайн формат</h3>
+              <p className="text-amber-700">Учитесь в удобное время</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="Award" className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-semibold text-lg mb-2">Сертификат</h3>
-              <p className="text-gray-600">Официальный документ о прохождении</p>
+              <h3 className="font-semibold text-lg mb-2 text-amber-900">Сертификат</h3>
+              <p className="text-amber-700">Официальный документ о прохождении</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-accent to-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Briefcase" className="w-8 h-8 text-white" />
+                <Icon name="Users" className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-semibold text-lg mb-2">Трудоустройство</h3>
-              <p className="text-gray-600">Помощь в поиске работы</p>
+              <h3 className="font-semibold text-lg mb-2 text-amber-900">Личный наставник</h3>
+              <p className="text-amber-700">Индивидуальная поддержка</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Course Program */}
-      <section id="program" className="py-20 px-4 bg-white/50">
+      <section id="program" className="py-20 px-4 bg-amber-50/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Программа курса
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Полный курс от основ до профессионального уровня. Каждый модуль включает теорию и практику.
+            <p className="text-xl text-amber-800 max-w-2xl mx-auto">
+              Полный онлайн курс от основ до профессионального уровня. Каждый модуль включает видео и практику.
             </p>
           </div>
           
@@ -174,13 +177,13 @@ export default function Index() {
                   <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform">
                     <Icon name={module.icon} className="w-8 h-8 text-white" />
                   </div>
-                  <CardTitle className="text-xl font-semibold">{module.title}</CardTitle>
+                  <CardTitle className="text-xl font-semibold text-amber-900">{module.title}</CardTitle>
                   <Badge variant="outline" className="w-fit mx-auto border-primary text-primary">
                     {module.duration}
                   </Badge>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-center">{module.description}</p>
+                  <p className="text-amber-700 text-center">{module.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -195,7 +198,7 @@ export default function Index() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Тарифы и цены
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-amber-800 max-w-2xl mx-auto">
               Выберите подходящий тариф для вашего уровня и целей
             </p>
           </div>
@@ -205,7 +208,7 @@ export default function Index() {
               <Card 
                 key={index} 
                 className={`relative hover:shadow-2xl transition-all duration-300 cursor-pointer ${
-                  tariff.popular ? 'border-2 border-primary scale-105 bg-gradient-to-b from-white to-pink-50' : 'bg-white/80 backdrop-blur-sm'
+                  tariff.popular ? 'border-2 border-primary scale-105 bg-gradient-to-b from-white to-amber-50' : 'bg-white/80 backdrop-blur-sm'
                 } ${selectedTariff === tariff.name ? 'ring-2 ring-primary' : ''}`}
                 onClick={() => setSelectedTariff(tariff.name)}
               >
@@ -215,17 +218,17 @@ export default function Index() {
                   </Badge>
                 )}
                 <CardHeader className="text-center">
-                  <CardTitle className="text-2xl font-bold">{tariff.name}</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-amber-900">{tariff.name}</CardTitle>
                   <div className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                     {tariff.price}
                   </div>
-                  <p className="text-gray-600">{tariff.duration}</p>
+                  <p className="text-amber-700">{tariff.duration}</p>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {tariff.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center space-x-3">
-                      <Icon name="Check" className="w-5 h-5 text-green-500" />
-                      <span className="text-gray-700">{feature}</span>
+                      <Icon name="Check" className="w-5 h-5 text-green-600" />
+                      <span className="text-amber-800">{feature}</span>
                     </div>
                   ))}
                   <Button 
@@ -242,14 +245,14 @@ export default function Index() {
       </section>
 
       {/* Schedule */}
-      <section id="schedule" className="py-20 px-4 bg-white/50">
+      <section id="schedule" className="py-20 px-4 bg-amber-50/30">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Расписание занятий
+              Старт потоков
             </h2>
-            <p className="text-xl text-gray-600">
-              Выберите удобное время для обучения
+            <p className="text-xl text-amber-800">
+              Выберите удобную дату для начала обучения
             </p>
           </div>
 
@@ -260,27 +263,27 @@ export default function Index() {
                 className={`hover:shadow-lg transition-all duration-300 ${
                   slot.available 
                     ? 'bg-white cursor-pointer hover:scale-105 border-green-200' 
-                    : 'bg-gray-100 opacity-60'
+                    : 'bg-amber-100 opacity-60'
                 }`}
               >
                 <CardContent className="p-6 flex items-center justify-between">
                   <div>
-                    <h3 className="font-semibold text-lg">{slot.day}</h3>
-                    <p className="text-gray-600">{slot.time}</p>
+                    <h3 className="font-semibold text-lg text-amber-900">{slot.day}</h3>
+                    <p className="text-amber-700">{slot.time}</p>
                   </div>
                   <div className="flex items-center space-x-2">
                     {slot.available ? (
                       <>
                         <Badge className="bg-green-100 text-green-800 border-green-200">
-                          Доступно
+                          Места есть
                         </Badge>
                         <Button size="sm" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90">
-                          Записаться
+                          Забронировать
                         </Button>
                       </>
                     ) : (
                       <Badge variant="secondary">
-                        Занято
+                        Набор закрыт
                       </Badge>
                     )}
                   </div>
@@ -298,13 +301,13 @@ export default function Index() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Галерея работ
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-amber-800">
               Работы наших выпускников и примеры техник
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500">
+            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 border-amber-200">
               <div className="relative overflow-hidden">
                 <img 
                   src="/img/0d14f846-93b1-463b-9336-55ca11a7d68d.jpg" 
@@ -320,7 +323,7 @@ export default function Index() {
               </div>
             </Card>
 
-            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500">
+            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 border-amber-200">
               <div className="relative overflow-hidden">
                 <img 
                   src="/img/a187ec9d-276c-41c6-b6c8-c4b00d4b2d03.jpg" 
@@ -336,7 +339,7 @@ export default function Index() {
               </div>
             </Card>
 
-            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500">
+            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 border-amber-200">
               <div className="relative overflow-hidden">
                 <img 
                   src="/img/b6754d9d-3239-45fa-a100-66f705bd1920.jpg" 
@@ -362,42 +365,42 @@ export default function Index() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Запишитесь на курс
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-amber-800">
               Оставьте заявку и мы свяжемся с вами для записи на обучение
             </p>
           </div>
 
-          <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-2xl">
+          <Card className="bg-white/90 backdrop-blur-sm border-amber-200 shadow-2xl">
             <CardContent className="p-8">
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Имя *</Label>
+                    <Label htmlFor="name" className="text-amber-900">Имя *</Label>
                     <Input id="name" placeholder="Ваше имя" className="border-2 focus:border-primary" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Телефон *</Label>
+                    <Label htmlFor="phone" className="text-amber-900">Телефон *</Label>
                     <Input id="phone" type="tel" placeholder="+7 (900) 000-00-00" className="border-2 focus:border-primary" />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email" className="text-amber-900">Email</Label>
                   <Input id="email" type="email" placeholder="your@email.com" className="border-2 focus:border-primary" />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="tariff">Выбранный тариф</Label>
-                  <select className="w-full p-3 border-2 rounded-lg focus:border-primary focus:outline-none">
+                  <Label htmlFor="tariff" className="text-amber-900">Выбранный тариф</Label>
+                  <select className="w-full p-3 border-2 rounded-lg focus:border-primary focus:outline-none text-amber-800">
                     <option value="">Выберите тариф</option>
-                    <option value="basic">Базовый - 15 000 ₽</option>
-                    <option value="standard">Стандарт - 25 000 ₽</option>
-                    <option value="pro">Профи - 35 000 ₽</option>
+                    <option value="basic">Базовый онлайн - 12 000 ₽</option>
+                    <option value="premium">Премиум - 24 000 ₽</option>
+                    <option value="vip">VIP Мастер - 45 000 ₽</option>
                   </select>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Комментарий</Label>
+                  <Label htmlFor="message" className="text-amber-900">Комментарий</Label>
                   <Textarea 
                     id="message" 
                     placeholder="Расскажите о ваших целях и опыте..."
@@ -410,7 +413,7 @@ export default function Index() {
                   Отправить заявку
                 </Button>
 
-                <p className="text-sm text-gray-500 text-center">
+                <p className="text-sm text-amber-600 text-center">
                   Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
                 </p>
               </form>
@@ -422,52 +425,56 @@ export default function Index() {
               <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="MapPin" className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-semibold text-lg mb-2">Адрес</h3>
-              <p className="text-gray-600">г. Москва, ул. Красная, д. 15</p>
+              <h3 className="font-semibold text-lg mb-2 text-amber-900">Адрес</h3>
+              <p className="text-amber-700">г. Москва, ул. Красная, д. 15</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-secondary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="Phone" className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-semibold text-lg mb-2">Телефон</h3>
-              <p className="text-gray-600">+7 (495) 123-45-67</p>
+              <h3 className="font-semibold text-lg mb-2 text-amber-900">Телефон</h3>
+              <p className="text-amber-700">+7 (495) 123-45-67</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-accent to-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="Mail" className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-semibold text-lg mb-2">Email</h3>
-              <p className="text-gray-600">info@nailartpro.ru</p>
+              <h3 className="font-semibold text-lg mb-2 text-amber-900">Email</h3>
+              <p className="text-amber-700">info@nailartacademy.ru</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4">
+      <footer className="bg-amber-900 text-white py-12 px-4">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-6">
-            <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
-              <Icon name="Sparkles" className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/files/64a672d0-19c7-424f-a7f9-4afb108ebbe7.png" 
+                alt="Lion Logo"
+                className="w-8 h-8 object-cover"
+              />
             </div>
-            <h3 className="text-2xl font-bold">NailArt Pro</h3>
+            <h3 className="text-2xl font-bold">NailArt Academy</h3>
           </div>
-          <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-            Профессиональная школа маникюра. Готовим специалистов высокого уровня с 2015 года.
+          <p className="text-amber-200 mb-6 max-w-2xl mx-auto">
+            Онлайн академия нейл-арта премиум класса. Обучаем мастерству с индивидуальным подходом с 2018 года.
           </p>
           <div className="flex justify-center space-x-6 mb-6">
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+            <a href="#" className="text-amber-300 hover:text-primary transition-colors">
               <Icon name="Instagram" className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+            <a href="#" className="text-amber-300 hover:text-primary transition-colors">
               <Icon name="Facebook" className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+            <a href="#" className="text-amber-300 hover:text-primary transition-colors">
               <Icon name="Youtube" className="w-6 h-6" />
             </a>
           </div>
-          <p className="text-gray-500 text-sm">
-            © 2024 NailArt Pro. Все права защищены.
+          <p className="text-amber-400 text-sm">
+            © 2024 NailArt Academy. Все права защищены.
           </p>
         </div>
       </footer>
